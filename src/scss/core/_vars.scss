@@ -1,0 +1,27 @@
+//colors
+$BLUE: #2e266f;
+$BLACK: #000;
+$GREY: #707070;
+$WHITE: #fff5ec;
+$LIHTGREEN: #35cd8c;
+$GREEN: #31a24c;
+$BIEGE: #ffedde;
+
+//fonts
+$base-font: "Poppins", sans-serif;
+$base-font-size: 16px;
+
+@function calcRem($size) {
+  $remSize: $size / $base-font-size;
+  @return #{$remSize}rem;
+}
+$H200: calcRem(200px);
+$H72: calcRem(72px);
+$H48: calcRem(48px);
+$H36: calcRem(36px);
+$H30: calcRem(30px);
+$H24: calcRem(24px);
+$H18: calcRem(18px);
+$H16: calcRem(16px);
+$H14: calcRem(14px);
+$H12: calcRem(12px);

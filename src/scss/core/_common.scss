@@ -11,18 +11,18 @@ input,
 button,
 textarea,
 select {
-  // font-family: sans-serif;
+  font-family: $base-font;
 }
 
 ul {
   list-style: none;
 }
 
-a, button {
+a,
+button {
   background-color: transparent;
   border: none;
   outline: none;
   display: inline-flex;
   text-decoration: none;
 }
-

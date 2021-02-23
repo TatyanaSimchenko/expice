@@ -4,4 +4,16 @@
 @import "./core/mixins";
 @import "./core/common";
 
+// Required Core Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Optional Theme Stylesheet
+// @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
 @import "./components/header.scss";
+@import "./components/menu.scss";
+@import "./components/burger.scss";
+@import "./components/popup.scss";
+@import "./components/slider.scss";
+@import "./components/about.scss";
+@import "./components/select.scss";

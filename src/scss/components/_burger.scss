@@ -1,0 +1,49 @@
+.burger {
+  // display: block;
+  width: 40px;
+  height: 29px;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  &__line {
+    display: block;
+    background-color: $WHITE;
+    height: 2px;
+    width: 100%;
+    transition: transform 0.2s ease;
+  }
+  &__line:nth-child(1) {
+    top: 0;
+  }
+  &__line:nth-child(2) {
+    top: 50%;
+    transition: transform 0.2s ease;
+    transform-origin: center center;
+  }
+  &__line:nth-child(3) {
+    bottom: 0;
+  }
+}
+.burger._active .burger__line:nth-child(1) {
+  background-color: $LIHTGREEN;
+  transform-origin: left top;
+  transform: rotate(44deg);
+}
+.burger._active .burger__line:nth-child(2) {
+  transform: scaleX(0);
+}
+.burger._active .burger__line:nth-child(3) {
+  background-color: $LIHTGREEN;
+  transform-origin: left bottom;
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 1195px) {
+  .burger {
+    display: none;
+  }
+}

@@ -20,5 +20,8 @@
     "posthtml": "~0.13.4",
     "posthtml-modules": "~0.6.2",
     "sass": "~1.27.0"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.4.1"
   }
 }

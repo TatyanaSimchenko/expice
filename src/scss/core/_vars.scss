@@ -1,8 +1,9 @@
 //colors
 $BLUE: #2e266f;
 $BLACK: #000;
+$WHITE: #fff;
 $GREY: #707070;
-$WHITE: #fff5ec;
+$MILK: #fff5ec;
 $LIHTGREEN: #35cd8c;
 $GREEN: #31a24c;
 $BIEGE: #ffedde;
@@ -16,7 +17,12 @@ $base-font-size: 16px;
   @return #{$remSize}rem;
 }
 $H200: calcRem(200px);
+$H150: calcRem(150px);
+$H125: calcRem(125px);
+$H100: calcRem(100px);
 $H72: calcRem(72px);
+$H60: calcRem(60px);
+$H50: calcRem(50px);
 $H48: calcRem(48px);
 $H36: calcRem(36px);
 $H30: calcRem(30px);

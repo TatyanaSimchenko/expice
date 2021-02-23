@@ -1,22 +1,84 @@
-<header>
-  <div class="header__logo">expise</div>
-  <ul class="header__menu">
-    <li class="header__menu-item">
-      <a class="header__menu-link" href="#">Menu One</a>
-    </li>
-    <li class="header__menu-item">
-      <a class="header__menu-link" href="#">Menu Two</a>
-    </li>
-    <li class="header__menu-item">
-      <a class="header__menu-link" href="#">Menu Three</a>
-    </li>
-    <li class="header__menu-item">
-      <a class="header__menu-link" href="#">Menu Four</a>
-    </li>
+<header id="header" class="header">
+  <div class="header__background"></div>
+  <div class="container">
+    <div class="header__logo">expise</div>
 
-  </ul>
-  <div class="header__user">
-    <div class="header__user-avatar"></div>
-    <a class="header__user-name" href="#"> User <span></span> </a>
+    <div id="menu" class="menu">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="#">Restaurants</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Booking</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Servises</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">App</a>
+        </li>
+      </ul>
+      <div class="user">
+        <a href="#popup" class="user__avatar popup-link">
+          <img class="user__img" src="/assets/images/user.png" alt="avatar">
+        </a>
+        <a class="user__name" href="#popup" id="user-name"> User <span><i
+              class="user__icon fas fa-angle-down"></i></span>
+        </a>
+      </div>
+    </div>
+
+    <button id="burger" class="burger">
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+    </button>
+
   </div>
+
+  <div class="baner">
+    <div class="baner__container">
+      <div class="baner__info"">
+      <p class=" baner__info-subtitle">Food</p>
+        <h1 class="baner__info-title">Discover Restaurant
+          & Delicious Food</h1>
+
+        <div class="select">
+          <button type="submit" class="select__btn">Go</button>
+          <div class="select__header">
+            <span class="select__current">search restaurant</span>
+          </div>
+
+          <div class="select__body">
+            <div class="select__item">Rajshahi</div>
+            <div class="select__item">New Market</div>
+            <div class="select__item">Saheb Bazar</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="baner__map"> <span class="baner__icon"><i class="fas fa-map-marker-alt"></i></span>
+        Rajshahi
+      </div>
+    </div>
+
+    <div class="glide-container">
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide"><img class="glide__slide-img" src="/assets/images/slide-1.png" alt="image"></li>
+            <li class="glide__slide"><img class="glide__slide-img" src="/assets/images/slide-2.png" alt="image"></li>
+            <li class="glide__slide"><img class="glide__slide-img" src="/assets/images/slide-3.png" alt="image"></li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="fas fa-arrow-left"></i></button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i
+              class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </header>

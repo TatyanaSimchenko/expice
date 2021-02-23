@@ -1,0 +1,189 @@
+.about {
+  min-height: 1150px;
+  padding-top: 50px;
+  &__description {
+    margin-bottom: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 135px;
+    @media (max-width: 1540px) {
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0 15px 0 15px;
+      align-items: flex-start;
+      margin-bottom: 50px;
+    }
+  }
+  &__description-title {
+    max-width: 660px;
+    @include text($H48, 500, $BLUE);
+    text-transform: capitalize;
+    border-left: 25px solid $LIHTGREEN;
+    padding-left: 25px;
+    margin-right: 100px;
+    @media (max-width: 1540px) {
+      margin-bottom: 50px;
+      margin-right: 0;
+    }
+    @media (max-width: 700px) {
+      @include text($H36, 500, $BLUE);
+    }
+    @media (max-width: 550px) {
+      @include text($H30, 500, $BLUE);
+    }
+    @media (max-width: 470px) {
+      @include text($H24, 500, $BLUE);
+    }
+  }
+  &__description-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 600px;
+    @include text($H14, 400, $BLUE);
+  }
+  &__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    @media (max-width: 1570px) {
+      padding: 0 15px 0 15px;
+    }
+    @media (max-width: 930px) {
+      flex-direction: column;
+    }
+  }
+}
+.about-item {
+  &__img {
+    border-radius: 20px;
+    overflow: hidden;
+    object-fit: cover;
+    width: 100%;
+    &:hover {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+  &__info {
+    position: relative;
+    bottom: 279px;
+    max-width: 639px;
+    min-height: 253px;
+    width: 100%;
+    padding: 60px 40px;
+    background-color: #35cd8b9c;
+    border-radius: 0px 0px 20px 20px;
+  }
+  &__info-title {
+    margin-bottom: 20px;
+    @include text($H24, 700, $WHITE);
+  }
+  &__info-text {
+    margin-bottom: 25px;
+    max-width: 340px;
+    @include text($H14, 400, $WHITE);
+    @media (max-width: 420px) {
+      margin-bottom: 10px;
+    }
+  }
+  &__icon {
+    color: $WHITE;
+    font-size: $H20;
+    margin-right: 10px;
+  }
+  &__info-map {
+    @include text($H14, 400, $WHITE);
+    @media (max-width: 420px) {
+      padding-bottom: 10px;
+    }
+  }
+  &__info-link {
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: 27px;
+    @include text($H16, 400, $LIHTGREEN);
+    line-height: 3.5;
+    width: 208px;
+    height: 58px;
+    background-color: $WHITE;
+    border-radius: 50px 0 0 50px;
+    transition: all 0.5s ease;
+    @media (max-width: 420px) {
+      max-width: 392px;
+      width: 100%;
+      bottom: 0;
+      border-radius: 0 0 20px 20px;
+    }
+    &:hover {
+      background-color: lighten($GREEN, 5%);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+      color: $WHITE;
+    }
+    &:active {
+      background-color: darken($GREEN, 5%);
+      color: $WHITE;
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 930px) {
+      position: relative;
+      bottom: 250px;
+    }
+  }
+  &__link-inner {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  &__link-line {
+    width: 70px;
+    height: 3px;
+    background-color: $LIHTGREEN;
+    border: 1px solid $LIHTGREEN;
+  }
+
+  &__link-arrow {
+    font-size: 24px;
+    line-height: 2;
+    color: $WHITE;
+    text-align: center;
+    @include size(50px);
+    border-radius: 50%;
+    background-color: $LIHTGREEN;
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: lighten($LIHTGREEN, 5%);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    }
+    &:active {
+      background-color: darken($LIHTGREEN, 5%);
+      transform: scale(1.3);
+    }
+  }
+  &__link-text {
+    @include text($H14, 400, $LIHTGREEN);
+    padding: 11px 0 0 53px;
+  }
+}
+.about-item:not(:last-of-type) {
+  margin-right: 40px;
+  @media (max-width: 930px) {
+    margin-right: 0;
+  }
+}
+.about-item:last-of-type {
+  margin-right: 100px;
+  @media (max-width: 930px) {
+    margin-right: 0;
+    position: relative;
+    bottom: 100px;
+  }
+}

@@ -1,10 +1,17 @@
+.title {
+  @include text($H48, 500, $BLUE);
+  text-transform: capitalize;
+  border-left: 25px solid $LIHTGREEN;
+  padding-left: 25px;
+}
+
 .about {
   min-height: 1150px;
   padding-top: 50px;
   &__description {
     margin-bottom: 160px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding-left: 135px;
     @media (max-width: 1540px) {
@@ -17,10 +24,6 @@
   }
   &__description-title {
     max-width: 660px;
-    @include text($H48, 500, $BLUE);
-    text-transform: capitalize;
-    border-left: 25px solid $LIHTGREEN;
-    padding-left: 25px;
     margin-right: 100px;
     @media (max-width: 1540px) {
       margin-bottom: 50px;

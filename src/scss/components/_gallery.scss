@@ -12,6 +12,7 @@
     @include text($H48, 500, $BLUE);
     text-transform: capitalize;
     margin-bottom: 30px;
+    padding: 0 15px;
   }
   &__head-text {
     @include text($H14, 400, $GREY);

@@ -1,8 +1,27 @@
+.description {
+  // @include flex(flex-start, center, row, nowrap);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 135px;
+  @media (max-width: 1540px) {
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 15px 0 15px;
+    align-items: flex-start;
+  }
+}
+
 .title {
   @include text($H48, 500, $BLUE);
   text-transform: capitalize;
   border-left: 25px solid $LIHTGREEN;
   padding-left: 25px;
+}
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include text($H14, 400, $BLUE);
 }
 
 .about {
@@ -10,21 +29,21 @@
   padding-top: 50px;
   &__description {
     margin-bottom: 160px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 135px;
+    // display: flex;
+    // justify-content: flex-start;
+    // align-items: center;
+    // padding-left: 135px;
     @media (max-width: 1540px) {
-      flex-direction: column;
-      flex-wrap: wrap;
-      padding: 0 15px 0 15px;
-      align-items: flex-start;
+      // flex-direction: column;
+      // flex-wrap: wrap;
+      // padding: 0 15px 0 15px;
+      // align-items: flex-start;
       margin-bottom: 50px;
     }
   }
   &__description-title {
     max-width: 660px;
-    margin-right: 100px;
+    margin-right: 150px;
     @media (max-width: 1540px) {
       margin-bottom: 50px;
       margin-right: 0;
@@ -40,10 +59,10 @@
     }
   }
   &__description-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
     max-width: 600px;
-    @include text($H14, 400, $BLUE);
+    // @include text($H14, 400, $BLUE);
   }
   &__items {
     display: flex;

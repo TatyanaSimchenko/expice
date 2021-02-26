@@ -112,12 +112,3 @@
 .select.is-active .select__body {
   display: block;
 }
-
-.select__item._visible {
-  display: block;
-  animation: fadeIn 1s ease;
-}
-
-.select__item._hide {
-  animation: fadeOut 0.4s ease;
-}

@@ -7,6 +7,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  &__span {
+    @include text($H24, 500, rgb(218, 5, 5));
+  }
   &__image-img {
     max-width: 700px;
     overflow: hidden;

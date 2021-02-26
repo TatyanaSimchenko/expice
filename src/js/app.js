@@ -62,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const select = function () {
     const selectHeader = document.querySelectorAll(".select__header");
-    const selectBody = document.querySelectorAll(".select__body");
     const selectItem = document.querySelectorAll(".select__item");
 
     selectHeader.forEach((item) => {
@@ -76,8 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     function selectChoose() {
       let text = this.innerText,
-        select = this.closest(".select");
-      currentText = select.querySelector(".select__current");
+        select = this.closest(".select"),
+        currentText = select.querySelector(".select__current");
       currentText.innerText = text;
       select.classList.remove("is-active");
     }
@@ -85,69 +84,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   select();
 
-  // let offset = 0;
-  // const sliderLine = document.querySelector(".slider__line");
+  const reg = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
 
-  // document
-  //   .querySelector(".button-slider__prev")
-  //   .addEventListener("click", function () {
-  //     offset = offset + 700;
-  //     if (offset > 1400) {
-  //       offset = 0;
-  //     }
+  const inp = document.querySelector("#name");
+  const span = document.querySelector(".span");
 
-  //     sliderLine.style.left = -offset + "px";
-  //   });
-  // document
-  //   .querySelector(".button-slider__next")
-  //   .addEventListener("click", function () {
-  //     offset = offset - 700;
-  //     if (offset < 0) {
-  //       offset = 1400;
-  //     }
-
-  //     sliderLine.style.left = -offset + "px";
-  //   });
-
-  // const images = document.querySelectorAll(".slider .slider__line img");
-  // const sliderLine = document.querySelector(".slider__line");
-  // let count = 0;
-  // let width;
-
-  // function init() {
-  //   console.log("resize");
-  //   width = document.querySelector(".slider").offsetWidth;
-  //   sliderLine.style.width = width * images.length + "px";
-  //   images.forEach((item) => {
-  //     item.style.width = width + "px";
-  //     item.style.height = "auto";
-  //   });
-  // }
-  // window.addEventListener("resize", init);
-  // init();
-
-  // document
-  //   .querySelector(".button-slider__next")
-  //   .addEventListener("click", function () {
-  //     count++;
-  //     if (count >= images.length) {
-  //       count = 0;
-  //     }
-
-  //     rollSlider();
-  //   });
-
-  // document
-  //   .querySelector(".button-slider__prev")
-  //   .addEventListener("click", function () {
-  //     count--;
-  //     if (count < 0) {
-  //       count = images.length - 1;
-  //     }
-  //     rollSlider();
-  //   });
-
-  // function rollSlider() {
-  //   sliderLine.style.transform = "translate(-" + count * width + "px";
-  // }
+  document.querySelector(".btn").onclick = function (e) {
+    e.preventDefault();
+    if (!validate(reg, inp.value)) {
+      notValid(inp, span, "Not valid E-mail");
+    } else {
+      valid(inp, span, "");
+    }
+  };
+  function validate(regex, inp) {
+    return regex.test(inp);
+  }
+  function notValid(inp, el, message) {
+    inp.classList.add("is-invalid");
+    el.innerHTML = message;
+  }
+  function valid(inp, el, message) {
+    inp.classList.remove("is-invalid");
+    inp.classList.add("is-valid");
+    el.innerHTML = message;
+  }
 });

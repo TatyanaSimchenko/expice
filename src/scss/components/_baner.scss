@@ -1,0 +1,87 @@
+.baner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  // @media screen and (max-width: 1100px) {
+  //   flex-wrap: wrap;
+  //   justify-content: center;
+  // }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 100px;
+    // max-width: 850px;
+    @media screen and (max-width: 895px) {
+      flex-direction: column;
+    }
+  }
+  &__info {
+    margin-left: 130px;
+    text-align: center;
+    @media screen and (max-width: 1340px) {
+      margin-left: 50px;
+    }
+  }
+  &__info-subtitle {
+    @include text($H200, 900, rgba(0, 0, 0, 0.1));
+    line-height: 0.7;
+    text-align: start;
+    @media screen and (max-width: 1540px) {
+      font-size: $H125;
+    }
+    @media screen and (max-width: 470px) {
+      font-size: $H100;
+    }
+  }
+  &__info-title {
+    @include text($H72, 700, $BLUE);
+    line-height: 1.2;
+    margin-bottom: 75px;
+    text-align: start;
+    @media screen and (max-width: 1540px) {
+      font-size: $H48;
+    }
+    @media screen and (max-width: 1425px) {
+      max-width: 700px;
+      font-size: $H36;
+    }
+    @media screen and (max-width: 1100px) {
+      max-width: 590px;
+    }
+    @media screen and (max-width: 470px) {
+      font-size: $H30;
+    }
+  }
+  &__map {
+    position: absolute;
+    bottom: 100px;
+    @include text($H30, 500, $WHITE);
+    background: $LIHTGREEN;
+    width: 280px;
+    height: 65px;
+    text-align: center;
+    line-height: 2.2;
+    flex-shrink: 0;
+    border-radius: 0 50px 50px 0;
+    margin-right: 10px;
+    @media screen and (max-width: 500px) {
+      width: 200px;
+      height: 50px;
+      font-size: $H24;
+    }
+    @media screen and (max-width: 360px) {
+      width: 180px;
+      height: 35px;
+      font-size: $H16;
+    }
+  }
+  &__image-img {
+    width: 100%;
+    @media screen and (max-width: 895px) {
+      max-width: 400px;
+    }
+  }
+}

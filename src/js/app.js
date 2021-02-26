@@ -1,11 +1,3 @@
-import Glide from "@glidejs/glide";
-new Glide(".glide", {
-  type: "carousel",
-  startAt: 0,
-  autoplay: 3000,
-  hoverpause: true,
-}).mount();
-
 document.addEventListener("DOMContentLoaded", () => {
   const burgerElement = document.getElementById("burger");
   const menuElement = document.getElementById("menu");

@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="icon shortcut" type="image/png" href="favicon.302320f0.png">
 
-  <link rel="stylesheet" href="style.7b4823fd.css">
-  <title>Parcel</title>
+  <link rel="stylesheet" href="style.14e2d7a3.css">
+  <title>Expise</title>
   <script src="https://kit.fontawesome.com/144e77a10a.js" crossorigin="anonymous"></script>
 
 </head>
@@ -21,16 +22,16 @@
     <div id="menu" class="menu">
       <ul class="menu__list">
         <li class="menu__item">
-          <a class="menu__link" href="#">Restaurants</a>
+          <a class="menu__link" href="#restaurants">Restaurants</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Booking</a>
+          <a class="menu__link" href="#servises">Servises</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Servises</a>
+          <a class="menu__link" href="#gallery">Gallery</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">App</a>
+          <a class="menu__link" href="#app">App</a>
         </li>
       </ul>
       <div class="user">
@@ -108,7 +109,7 @@
         <form name="signup" class="popup__form">
           <div class="popup__label">
             <input name="name" required="" class="popup__input" type="text" placeholder="Your name">
-            <input name="tel" required="" class="popup__input" type="tel" placeholder="Your phone number">
+            <input pattern="[0-9]+" name="tel" required="" class="popup__input" type="tel" placeholder="Your phone number">
             <input name="email" required="" class="popup__input" type="email" placeholder="Your E-mail">
             <input name="password" required="" class="popup__input" type="password" placeholder="Your password">
           </div>
@@ -118,7 +119,7 @@
     </div>
   </div>
 </div>
-  <section class="about">
+  <section class="about" id="restaurants">
   <div class="about__description description">
     <h2 class="about__description-title title">some top restaurant for
       dining in or Take away!</h2>
@@ -139,7 +140,7 @@
           in!dining out or in!</p>
         <div class="about-item__info-map"><span class="about-item__icon"><i class="fa-map-marker-alt fas"></i></span>New
           Market</div>
-        <a href="#" class="about-item__info-link">Book Now </a>
+        <a href="#popup" class="about-item__info-link">Book Now </a>
       </div>
 
     </div>
@@ -151,11 +152,11 @@
           in!dining out or in!</p>
         <div class="about-item__info-map"><span class="about-item__icon"><i class="fa-map-marker-alt fas"></i></span>Saheb
           Bazar</div>
-        <a href="#" class="about-item__info-link">Book Now </a>
+        <a href="#popup" class="about-item__info-link">Book Now </a>
       </div>
 
     </div>
-    <a href="#" class="about-item__link">
+    <a href="#popup" class="about-item__link">
       <div class="about-item__link-inner">
         <span class="about-item__link-line"></span>
         <span class="about-item__link-arrow"><i class="fa-chevron-right fas"></i></span>
@@ -165,7 +166,7 @@
     </a>
   </div>
 </section>
-  <section class="servises">
+  <section class="servises" id="servises">
   <div class="description servises__description">
     <h2 class="servises__description-title title">Our Services</h2>
     <p class="servises__description-text text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing
@@ -220,7 +221,7 @@
 
   </div>
 </section>
-  <section class="gallery">
+  <section class="gallery" id="gallery">
   <div class="gallery__head">
     <h2 class="gallery__head-title">Explore Our Foods</h2>
     <p class="gallery__head-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing cursus auctor
@@ -296,7 +297,7 @@
   </div>
 
 </section>
-  <section class="app">
+  <section class="app" id="app">
   <div class="app__inner">
     <h2 class="app__title title">Download app for
       Exciting Deals
@@ -304,11 +305,11 @@
     <p class="app__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing cursus auctor eget sed
       phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt. </p>
     <div class="app__links">
-      <a class="app__link" href="#"><i class=" app__link-icon fa-google-play fab"></i>
+      <a class="app__link" href="https://play.google.com/store"><i class=" app__link-icon fa-google-play fab"></i>
         <span class="app__link-text app__link-text">get in on google play</span>
 
       </a>
-      <a class="app__link" href="#"><i class=" app__link-icon fa-apple fab"></i>
+      <a class="app__link" href="https://www.apple.com/ru/app-store/"><i class=" app__link-icon fa-apple fab"></i>
 
         <span class="app__link-text">Download on the App Store</span>
 
@@ -331,10 +332,18 @@
       <p class="footer__block-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing cursus
         auctor
         eget sed phasellus senectus. </p>
+
+
+
       <form class="footer__form">
-        <input class="footer__form-input" type="email" placeholder="E-mail">
-        <button class="footer__btn"><i class="fa-arrow-right fas"></i></button>
+        <div class="footer__span span"></div>
+        <input name="name" id="name" class="footer__form-input" type="email" placeholder="E-mail">
+
+        <button type="submit" class="btn footer__btn"><i class="fa-arrow-right fas"></i></button>
       </form>
+
+
+
       <div class="footer__links">
         <a class="footer__links-link" href="#">Product</a>
         <a class="footer__links-link" href="#">Company</a>
@@ -345,10 +354,10 @@
 
     <div class="footer__socials">
       <div class="footer__social">
-        <a class="footer__social-link" href="#"><i class="fa-facebook-f fab"></i></a>
-        <a class="footer__social-link" href="#"><i class="fa-twitter fab"></i></a>
-        <a class="footer__social-link" href="#"><i class="fa-linkedin-in fab"></i></a>
-        <a class="footer__social-link" href="#"><i class="fa-behance fab"></i></a>
+        <a class="footer__social-link" href="https://www.facebook.com/profile.php?id=100001282603803"><i class="fa-facebook-f fab"></i></a>
+        <a class="footer__social-link" href="https://twitter.com/?lang=uk"><i class="fa-twitter fab"></i></a>
+        <a class="footer__social-link" href="https://www.linkedin.com"><i class="fa-linkedin-in fab"></i></a>
+        <a class="footer__social-link" href="https://www.behance.net"><i class="fa-behance fab"></i></a>
       </div>
       <p class="footer__socials-text">©2020 Expice Studio</p>
     </div>
@@ -361,6 +370,6 @@
 
 
 
-<script src="app.1ec0fd85.js"></script>
+<script src="app.83127a81.js"></script>
 
 </html>
